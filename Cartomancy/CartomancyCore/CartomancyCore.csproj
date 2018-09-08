@@ -33,6 +33,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -42,6 +43,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BiomeTemplate.cs" />
+    <Compile Include="Classification.cs" />
     <Compile Include="CartomancyObject.cs" />
     <Compile Include="MapTemplate.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

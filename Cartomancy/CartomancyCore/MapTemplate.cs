@@ -1,10 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using System.Collections.Generic;
 using System.Runtime.Serialization;
-using System.Runtime.Serialization.Json;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace CartomancyCore
 {
@@ -17,9 +12,13 @@ namespace CartomancyCore
         [DataMember]
         public int SizeVertical { get; set; }
 
-        public MapTemplate() : base(typeof(MapTemplate))
-        {
+        [DataMember]
+        public List<BiomeTemplate> BiomeTemplates { get; } = new List<BiomeTemplate>();
 
+        public MapTemplate(string name) : base(typeof(MapTemplate))
+        {
+            Name = name;
+            BiomeTemplates.Add(new BiomeTemplate("Warrens") { BiomeType = Classification.BiomeType.Grass });
         }
     }
 }

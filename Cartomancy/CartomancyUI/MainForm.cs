@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using CartomancyCore;
 
@@ -22,7 +15,7 @@ namespace CartomancyUI
         {
             var horz = Convert.ToInt32(MapHorzTextBox.Text);
             var vert = Convert.ToInt32(MapVertTextBox.Text);
-            var mapTemplate = new MapTemplate() { SizeHorizontal = horz, SizeVertical = vert };
+            var mapTemplate = new MapTemplate("DevMap") { SizeHorizontal = horz, SizeVertical = vert };
             JsonRichTextBox.Text = mapTemplate.ToJsonString();
         }
     }
