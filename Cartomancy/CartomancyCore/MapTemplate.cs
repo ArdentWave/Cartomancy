@@ -18,7 +18,7 @@ namespace CartomancyCore
         public MapTemplate(string name) : base(typeof(MapTemplate))
         {
             Name = name;
-            BiomeTemplates.Add(new BiomeTemplate("Warrens") { BiomeType = Classification.BiomeType.Grass });
+            BiomeTemplates.Add(new BiomeTemplate("Warrens") { Type = BiomeTemplate.BiomeType.Grass });
         }
     }
 }

@@ -1,4 +1,5 @@
-﻿using System.Drawing;
+﻿using System.Collections.Generic;
+using System.Drawing;
 using System.Runtime.Serialization;
 
 namespace CartomancyCore
@@ -6,6 +7,11 @@ namespace CartomancyCore
     [DataContract]
     public class BiomeTemplate : CartomancyObject
     {
+        public enum BiomeType : int
+        {
+            Grass = 0
+        };
+
         [DataMember]
         public int StartX { get; set; }
 
@@ -13,7 +19,10 @@ namespace CartomancyCore
         public int StartY { get; set; }
 
         [DataMember]
-        public Classification.BiomeType BiomeType;
+        public BiomeType Type;
+
+        [DataMember]
+        public List<TileTemplate> TileTemplates { get; } = new List<TileTemplate>(); 
 
         public BiomeTemplate(string name) : base(typeof(BiomeTemplate))
         {
