@@ -10,6 +10,11 @@ namespace CartomancyCore
     [DataContract]
     public class TileTemplate : CartomancyObject
     {
+        public enum TileType : int
+        {
+            DarkGrass = 0
+        }
+
         [DataMember]
         public int X;
 
