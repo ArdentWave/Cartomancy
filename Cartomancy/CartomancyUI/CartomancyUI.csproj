@@ -79,11 +79,5 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\CartomancyCore\CartomancyCore.csproj">
-      <Project>{0b51908c-c622-42cd-b937-067020adf764}</Project>
-      <Name>CartomancyCore</Name>
-    </ProjectReference>
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
